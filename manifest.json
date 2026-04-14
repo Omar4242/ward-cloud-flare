@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Wardyati Sniper",
+  "version": "1.0",
+  "permissions": ["cookies", "storage", "activeTab"],
+  "host_permissions": ["https://*.wardyati.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://*.wardyati.com/*"],
+    "js": ["content.js"]
+  }],
+  "action": { "default_popup": "popup.html" }
+}
