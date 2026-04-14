@@ -1,8 +1,8 @@
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg.action === 'getCookies') {
-    chrome.cookies.getAll({ url: 'https://wardyati.com' }, cookies => {
+  if (msg.action === 'getAllCookies') {
+    chrome.cookies.getAll({ domain: 'wardyati.com' }, cookies => {
       sendResponse(cookies);
     });
-    return true; // async response
+    return true; // keep message channel open
   }
 });
