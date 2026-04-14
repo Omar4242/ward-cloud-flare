@@ -71,7 +71,7 @@ btn.addEventListener('click', async () => {
   };
 
   try {
-    const res = await fetch('https://your-worker.your-subdomain.workers.dev/schedule', {
+    const res = await fetch('https://wardyati-servers.omar-mo-abd-monem.workers.dev//schedule', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
